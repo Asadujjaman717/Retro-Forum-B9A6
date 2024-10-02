@@ -17,6 +17,7 @@
   </head>
   <body>
     <header class="mx-32 mt-14">
+
       <!-- Navbar -->
       <div class="navbar bg-base-100">
         <!-- Navbar start -->
@@ -57,10 +58,7 @@
       <div
         class="hero bg-base-200 rounded-2xl mt-6 bg-slate-900 lg:h-[500px] h-[30vh] bg-center bg-cover lg:p-8" style="background-image: url(images/bgbanner.png);">
       
-        <div class="hero-content flex-col lg:flex-row mx-6 items-center">
-          <!-- <img
-            src="images/bgbanner.png"
-            class="max-w-sm rounded-lg shadow-2xl" /> -->
+        <div class="hero-content flex-col lg:flex-row mx-6 items-center">       
           <div>
             <h1 class="font-extrabold text-6xl text-white">
               Welcome To The <span class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text">ReTro</span> Forum
@@ -96,20 +94,25 @@
       </div>
     </header>
     <main class="mx-32">
-      <!-- lets discuss -->
-      <div class="container lets_discuss_section lg:mt-24">
+      <!-- lets discuss section-->
+      <div id="lets_discuss_section" class="lg:mt-24">
         <div class="text-center">
           <h3 class="text-3xl font-bold p-4">Let's Discuss</h3>
-        <p class="lg:max-w-lg mx-auto">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+          <p class="lg:max-w-lg mx-auto">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
         </div>
 
-        <!-- lets discuss result -->
-        <div class="search-result-container grid grid-cols-3 mt-8 gap-4">
-          <div class="search-result col-span-2">
+        <!-- lets discuss container start-->
+        <div id="lets-discuss-container" class="grid grid-cols-3 mt-8 gap-4">
+          <!-- lets discuss posts start -->
+          <div id="lets-discuss-posts" class="col-span-2">
+            <!-- card start -->
+
+             <!-- <div>
             <div class="card bg-base-200 shadow-xl rounded-lg flex flex-row items-center justify-center px-3">
-              <div class="">
+              
                 <img src="images/joinforum.png" alt="">
-              </div>           
+              </div>     
+
               <div class="card-body">
                 <div class="flex gap-4">
                   <h5>#Music</h5>
@@ -133,19 +136,26 @@
                     <p>5 min</p>
                   </div>
                 </div>
+
               </div>
-            </div>
+            </div> -->
+
+            <!-- card end -->
+
           </div>
+          <!-- lets discuss post end -->
+
+          <!-- mark as read section start -->
           <!-- title -->
-          <div class="search-title card bg-base-200 shadow-xl rounded-lg p-4">
+          <div id="search-title" class="card bg-base-200 shadow-xl rounded-lg p-4">
             <div>
               <div class="flex justify-between mb-4">
                 <h3>Title</h3>
                 <p><i class="fa-solid fa-check-double"></i> Mark as read</p>
               </div>
             </div>
-            <!-- message -->
-            <div class="">
+            <!-- message highlights-->
+            <div id="message-highlights">
               <div class="flex flex-row justify-between items-start card bg-white shadow-xl rounded-lg p-4 mb-2">
                 <p>10Kids Unaware of Their Halloween Costume </p>
                 <div class="flex justify-center items-center gap-1">
@@ -157,33 +167,39 @@
                 <p>10Kids Unaware of Their Halloween Costume </p>
                 <div class="flex justify-center items-center gap-1">
                   <i class="fa-solid fa-eye"> </i>
-                <p> 1568</p>
+                  <p> 1568</p>
                 </div>
               </div>
             </div>
 
           </div>
+          <!-- mark as read section end -->
         </div>
-        <!-- join our forum -->
-         <div class="join-our-forum hero bg-base-200 rounded-2xl bg-black lg:h-[400px] h-[30vh] bg-center bg-cover lg:p-8 lg:mt-20 grid grid-cols-3 ">
-          <div class="join-forum-content col-span-2 text-white p-4">
+        <!-- lets discuss container end -->
+         </div>
+         <!-- lets discuss section end -->
+
+        <!-- join our forum start-->
+         <div id="join-our-forum" class="hero bg-base-200 rounded-2xl bg-black lg:h-[400px] h-[30vh] bg-center bg-cover lg:p-8 lg:mt-20 grid grid-cols-3 ">
+          <div id="join-forum-content" class="col-span-2 text-white p-4">
             <h2 class="text-3xl font-bold pb-2">Join Our Forum</h2>
-            <p>Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app. </p>
+            <p>Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app.</p>
             <button class="btn btn-info mt-4">Registered Now</button>
           </div>
-          <div class="join-forum-picture col-span-1">
+          <div id="join-forum-picture" class="col-span-1">
             <img src="images/joinforum.png" alt="">
           </div>
          </div>
-      </div>
-      <!-- latest posts -->
-       <div class="latest-post-container container lg:mt-20">
+         <!-- join our forum end -->
+      
+      <!-- latest posts container start-->
+       <div id="latest-post-container" class="container lg:mt-20">
         <div class="text-center">
           <h2 class="text-3xl font-bold">Latest Post</h2>
-          <p class="lg:max-w-lg mx-auto lg:mb-8">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+          <p class="lg:max-w-lg mx-auto lg:mb-8">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
         </div>       
         <!-- cards  -->
-        <div class="latest-post-cards grid grid-cols-3 gap-2 mb-20">
+        <div id="latest-post-cards" class="grid grid-cols-3 gap-2 mb-20">
           <div class="card shadow-xl border-2">    
             <div class="bg-base-200 h-36 mx-4 mt-4 rounded-lg"></div>    
 
@@ -214,7 +230,7 @@
                 <p>29 January 2024</p>
               </div>
               <h5 class="font-semibold">What will a mars habitat force that impact in our daily life!!!</h5>
-              <p>Yes, you can run unit tests and view the results directly within the app. </p>
+              <p>Yes, you can run unit tests and view the results directly within the app.</p>
               <div class="flex gap-2">
                 <div>
                   <i class="fa-solid fa-user"></i>
@@ -249,8 +265,9 @@
           </div>
         </div>
        </div>
-
+       <!-- latest posts container end -->
     </main>
+
     <footer>
       <footer class="footer footer-center bg-base-200 text-base-content rounded p-10">
        <div class="text-center">
