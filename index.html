@@ -16,68 +16,68 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header class="mx-32 mt-14">
+    <header class="lg:mx-32 md:mx-12 mx-1 lg:mt-14 mt-6">
 
       <!-- Navbar -->
       <div class="navbar bg-base-100">
         <!-- Navbar start -->
         <div class="navbar-start">
-          <a class="btn btn-ghost text-3xl font-extrabold">ReTro</a>
+          <a class="btn btn-ghost lg:text-3xl text-xl font-extrabold">ReTro</a>
         </div>
         <!-- Navbar End -->
         <div class="navbar-end">
           <div
-            class="icon grid grid-flow-col justify-center items-center gap-2"
+            class="icon grid grid-flow-col justify-center items-center lg:gap-2 gap-1"
           >
             <div class="tooltip" data-tip="Home">
               <button class="btn btn-circle justify-center items-center">
-                <i class="fa-solid fa-house p-2"></i>
+                <i class="fa-solid fa-house lg:p-2 p-1"></i>
               </button>
             </div>
             <div class="tooltip" data-tip="Edit">
               <button class="btn btn-circle justify-center items-center">
-                <i class="fa-solid fa-pen p-2"></i>
+                <i class="fa-solid fa-pen lg:p-2 p-1"></i>
               </button>
             </div>
             <div class="tooltip" data-tip="Profile">
               <button class="btn btn-circle justify-center items-center">
-                <i class="fa-solid fa-user-plus p-2"></i>
+                <i class="fa-solid fa-user-plus lg:p-2 p-1"></i>
               </button>
             </div>
-            <div class="tooltip" data-tip="Flag">
+            <div class="tooltip" data-tip="Country">
               <button class="btn btn-circle justify-center items-center">
-                <i class="fa-solid fa-flag p-2"></i>
+                <i class="fa-solid fa-flag lg:p-2 p-1"></i>
               </button>
             </div>
-            <button class="btn btn-info rounded-full p-4">Sign in</button>
+            <button class="btn btn-info rounded-full lg:p-4">Sign in</button>
           </div>
         </div>
       </div>
 
       <!-- Banner -->
       <div
-        class="hero bg-base-200 rounded-2xl mt-6 bg-slate-900 lg:h-[500px] h-[30vh] bg-center bg-cover lg:p-8" style="background-image: url(images/bgbanner.png);">
+        class="hero bg-base-200 rounded-2xl mt-6 bg-slate-900 lg:h-[500px] h-[55vh] bg-center bg-cover lg:p-8 p-2" style="background-image: url(images/bgbanner.png);">
       
-        <div class="hero-content flex-col lg:flex-row mx-6 items-center">       
+        <div class="hero-content lg:flex-row flex-col lg:mx-6 mx-1 items-center">       
           <div>
-            <h1 class="font-extrabold text-6xl text-white">
+            <h1 class="font-extrabold lg:text-6xl text-2xl text-white">
               Welcome To The <span class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text">ReTro</span> Forum
             </h1>
-            <p class="text-white p-4">
+            <p class="text-white lg:p-4 p-2">
               Share your favorite opinion and win and wp<br> forum coffee mug!
             </p>
             <input id="search-field"
               type="text"
               placeholder="Search here anything"
-              class="input input-bordered input-primary w-full max-w-xs"
+              class="input input-bordered input-primary lg:w-full w-2/3  max-w-xs"
             />
             <button onclick="handleSearch()" class="btn btn-info justify-center items-center">Search</button>
           </div>
 
           <!-- spinner or loader -->
 
-
-          <div class="card bg-base-100 w-96 shadow-xl">
+          <!-- registered user details -->
+          <div class="card bg-base-100 lg:w-96 shadow-xl lg:mt-0 mt-10">
             <div class="card-body flex flex-row items-center justify-between">
               <div>
                 <p>Registered Users</p>
@@ -96,23 +96,23 @@
         </div>
       </div>
     </header>
-    <main class="mx-32">
+    <main class="lg:mx-32 md:mx-12 mx-4">
       <!-- spinner or loader  -->
       <div id="loading-spinner" class="text-center my-10 hidden">
         <span class="loading loading-spinner loading-lg"></span>
       </div>
 
       <!-- lets discuss section-->
-      <div id="lets_discuss_section" class="lg:mt-24">
+      <div id="lets_discuss_section" class="lg:mt-24 mt-4">
         <div class="text-center">
-          <h3 class="text-3xl font-bold p-4">Let's Discuss</h3>
-          <p class="lg:max-w-lg mx-auto">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
+          <h3 class="lg:text-3xl text-xl font-bold lg:p-4 ">Let's Discuss</h3>
+          <p class="max-w-lg mx-auto">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
         </div>
 
         <!-- lets discuss container start-->
-        <div id="lets-discuss-container" class="grid grid-cols-3 mt-8 gap-4">
+        <div id="lets-discuss-container" class="grid grid-cols-3 mt-8 lg:gap-4 gap-2">
           <!-- lets discuss posts start -->
-          <div id="lets-discuss-posts" class="col-span-2">
+          <div id="lets-discuss-posts" class="lg:col-span-2 col-span-3">
             <!-- card start -->
 
              <!-- <div>
@@ -155,7 +155,7 @@
 
           <!-- mark as read section start -->
           <!-- title -->
-          <div id="search-title" class="card bg-base-200 shadow-xl rounded-lg p-4">
+          <div id="search-title" class="card bg-base-200 shadow-md rounded-lg lg:p-4 p-2 lg:col-span-1 col-span-3 mb-4">
             <div>
               <div class="flex justify-between mb-4">
                 <h3>Title</h3>
@@ -189,7 +189,7 @@
          <!-- lets discuss section end -->
 
         <!-- join our forum start-->
-         <div id="join-our-forum" class="hero bg-base-200 rounded-2xl bg-black lg:h-[400px] h-[30vh] bg-center bg-cover lg:p-8 lg:mt-20 grid grid-cols-3 ">
+         <div id="join-our-forum" class="hero bg-base-200 rounded-2xl bg-black lg:h-[400px] h-[40vh] bg-center bg-cover lg:p-8 lg:mt-20 grid grid-cols-3 mb-4">
           <div id="join-forum-content" class="col-span-2 text-white p-4">
             <h2 class="text-3xl font-bold pb-2">Join Our Forum</h2>
             <p>Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app.</p>
@@ -203,7 +203,7 @@
       
       <!-- latest posts container start-->
        <div id="latest-post-container" class="container lg:mt-20">
-        <div class="text-center">
+        <div class="text-center mb-6">
           <h2 class="text-3xl font-bold">Latest Post</h2>
           <p class="lg:max-w-lg mx-auto lg:mb-8">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
         </div>       
@@ -232,55 +232,16 @@
             </div>
           </div>
 
-          <div class="card shadow-xl border-2">    
-            <div class="bg-base-200 h-36 mx-4 mt-4 rounded-lg"></div>    
-
-            <div class="card-body">
-              <div class="flex gap-1 justify-center items-center">
-                <i class="fa-solid fa-calendar-days"> </i>
-                <p>29 January 2024</p>
-              </div>
-              <h5 class="font-semibold">What will a mars habitat force that impact in our daily life!!!</h5>
-              <p>Yes, you can run unit tests and view the results directly within the app.</p>
-              <div class="flex gap-2">
-                <div>
-                  <i class="fa-solid fa-user"></i>
-                </div>
-                <div>
-                  <h5>Cameron Williamson</h5>
-                  <p>Unknown</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card shadow-xl border-2">    
-            <div class="bg-base-200 h-36 mx-4 mt-4 rounded-lg"></div>    
-
-            <div class="card-body">
-              <div class="flex gap-1 justify-center items-center">
-                <i class="fa-solid fa-calendar-days"> </i>
-                <p>29 January 2024</p>
-              </div>
-              <h5 class="font-semibold">What will a mars habitat force that impact in our daily life!!!</h5>
-              <p>Yes, you can run unit tests and view the results directly within the app. </p>
-              <div class="flex gap-2">
-                <div>
-                  <i class="fa-solid fa-user"></i>
-                </div>
-                <div>
-                  <h5>Cameron Williamson</h5>
-                  <p>Unknown</p>
-                </div>
-              </div>
-            </div>
           </div> -->
         </div>
        </div>
        <!-- latest posts container end -->
+
     </main>
 
-    <footer>
-      <footer class="footer footer-center bg-base-200 text-base-content rounded p-10">
+    <!-- footer -->
+    
+      <footer class="footer footer-center bg-base-200 text-base-content rounded lg:p-10 p-2">
        <div class="text-center">
         <h3 class="text-3xl font-bold">ReTro</h3>
         <p class="max-w-lg ">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC</p>
@@ -339,7 +300,6 @@
           <p>2024.All right reserved</p>
         </aside>
       </footer>
-    </footer>
     <script src="js/retro.js"></script>
   </body>
 </html>

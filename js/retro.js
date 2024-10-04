@@ -19,10 +19,10 @@ const displayPosts = allPost =>{
     console.log(post);
     // step 1: create a div
     const postCard = document.createElement('div');
-    postCard.classList = `card bg-base-200 shadow-xl rounded-lg flex flex-row items-center justify-center p-4 m-4`;
+    postCard.classList = `card bg-base-200 shadow-md rounded-lg flex flex-row justify-center lg:p-4 lg:m-4 p-2 m-2`;
     // step 3: set innerHTML
     postCard.innerHTML = `
-            <div class="">
+            <div class="lg:pt-8">
                 <img class="w-12 h-auto rounded-xl " src="${post.image}" alt="">
             </div>
 
@@ -31,8 +31,10 @@ const displayPosts = allPost =>{
                   <h5># ${post.category}</h5>
                   <h5>Author: ${post.author.name}</h5>
                 </div>
-                <h2 class="card-title">${post.title}</h2>
-                <p class="mx-auto">${post.description}</p>
+                <div class="">
+                    <h2 class="card-title">${post.title}</h2>
+                    <p class="mx-auto">${post.description}</p>
+                </div>
                 <hr>
                 
                 <div class="flex justify-between">
@@ -94,7 +96,7 @@ const displayPosts2 = post =>{
     const highlightCard = document.createElement('div');
 
     highlightCard.innerHTML = `
-        <div class="flex flex-row justify-between items-start card bg-white shadow-xl rounded-lg p-4 mb-2">
+        <div class="flex flex-row justify-between items-start card bg-white shadow-md rounded-lg lg:p-4 mb-2">
             <p>${post.title}</p>
             <div class="flex justify-center items-center gap-1">
                 <i class="fa-solid fa-eye"></i>
@@ -123,7 +125,7 @@ const displayLatest = posts =>{
     posts.forEach(post =>{
         console.log(post);
         const latestCard = document.createElement('div');
-        latestCard.classList = `card shadow-xl border-2`;
+        latestCard.classList = `card shadow-xl border-2 lg:col-span-1 col-span-3`;
     
      latestCard.innerHTML = ` 
 
