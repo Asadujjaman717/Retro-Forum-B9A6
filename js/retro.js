@@ -1,4 +1,4 @@
-const loadPost = async (searchText) =>{
+const loadPost = async (searchText='coding') =>{
     const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchText}`);
     const data = await res.json();
     const allPost = data.posts;
@@ -22,10 +22,10 @@ const displayPosts = allPost =>{
     postCard.classList = `card bg-base-200 shadow-md rounded-lg flex flex-row justify-center lg:p-4 lg:m-4 p-2 m-2`;
     // step 3: set innerHTML
     postCard.innerHTML = `
-            <div class="lg:pt-8">
+            <div class="lg:pt-8 relative">
                 <img class="w-12 h-auto rounded-xl " src="${post.image}" alt="">
+                
             </div>
-
                <div class="card-body">
                 <div class="flex gap-4">
                   <h5># ${post.category}</h5>
@@ -132,7 +132,6 @@ const displayLatest = posts =>{
             <div>
                 <img class="p-2 rounded-2xl" src="${post.cover_image}" alt="">
             </div>    
-
             <div class="card-body">
               <div class="flex gap-1 justify-center items-center">
                 <i class="fa-solid fa-calendar-days"> </i>
@@ -178,5 +177,15 @@ const toggleLoadingSpinner = (isLoading) =>{
     }
 }
 
-loadPost();
-// latestPost();
+// const activeStatus = (isActive) =>{
+//   if(isActive){
+//     statusIndicator.classList.add('bg-green-500');
+//     statusIndicator.classList.remove('bg-red-500');
+//   } else{
+//     statusIndicator.classList.add('bg-red-500');
+//         statusIndicator.classList.remove('bg-green-500');
+//   }
+// }
+
+// loadPost();
+latestPost();
