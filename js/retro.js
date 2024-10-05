@@ -1,4 +1,4 @@
-const loadPost = async (searchText='coding') =>{
+const loadPost = async (searchText) =>{
     const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchText}`);
     const data = await res.json();
     const allPost = data.posts;
@@ -179,4 +179,4 @@ const toggleLoadingSpinner = (isLoading) =>{
 }
 
 loadPost();
-latestPost();
+// latestPost();
